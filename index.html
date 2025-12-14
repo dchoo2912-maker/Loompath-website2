@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LoomPath — Home</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        loomBlue: "#0ea5e9",
+        loomDeep: "#0369a1",
+        loomSoft: "#eff8ff"
+      }
+    }
+  }
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white text-gray-800">
+
+<header class="fixed w-full z-40 bg-white/80 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/img/logo.jpg" alt="LoomPath logo" class="w-11 h-11 rounded-full object-cover">
+      <div>
+        <div class="font-semibold text-lg">LoomPath</div>
+        <div class="text-xs text-gray-500">Igniting Curiosity</div>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="index.html" class="hover:text-loomDeep">Home</a>
+      <a href="programs.html" class="hover:text-loomDeep">Programs</a>
+      <a href="about.html" class="hover:text-loomDeep">About</a>
+      <a href="gallery.html" class="hover:text-loomDeep">Gallery</a>
+      <a href="faq.html" class="hover:text-loomDeep">FAQ</a>
+      <a href="get-involved.html" class="hover:text-loomDeep">Get Involved</a>
+      <a href="donate.html" class="hover:text-loomDeep">Donate</a>
+      <a href="contact.html" class="hover:text-loomDeep">Contact</a>
+      <a href="donate.html" class="ml-4 inline-block bg-loomBlue text-white px-4 py-2 rounded-full text-sm hover:bg-loomDeep transition">Donate</a>
+    </nav>
+
+    <div class="md:hidden">
+      <details class="relative">
+        <summary class="cursor-pointer px-3 py-2 rounded-md bg-loomBlue text-white">Menu</summary>
+        <div class="absolute right-0 mt-2 bg-white shadow rounded-md w-48 py-2">
+          <a href="index.html" class="block px-4 py-2 hover:bg-gray-50">Home</a>
+          <a href="programs.html" class="block px-4 py-2 hover:bg-gray-50">Programs</a>
+          <a href="about.html" class="block px-4 py-2 hover:bg-gray-50">About</a>
+          <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-50">Gallery</a>
+          <a href="faq.html" class="block px-4 py-2 hover:bg-gray-50">FAQ</a>
+          <a href="get-involved.html" class="block px-4 py-2 hover:bg-gray-50">Get Involved</a>
+          <a href="donate.html" class="block px-4 py-2 hover:bg-gray-50">Donate</a>
+          <a href="contact.html" class="block px-4 py-2 hover:bg-gray-50">Contact</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<script>
+window.addEventListener('scroll', function(){
+  var h = document.querySelector('header');
+  if(!h) return;
+  if(window.scrollY > 20) h.classList.add('shadow-md');
+  else h.classList.remove('shadow-md');
+});
+</script>
+
+<main class="pt-28">
+
+<!-- HERO -->
+<section class="bg-gradient-to-r from-loomDeep to-loomBlue text-white">
+  <div class="max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wide">Empowering Young Innovators, Everywhere</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold mt-4">Empowering Young Innovators, Everywhere</h1>
+      <p class="mt-6 text-lg text-white/90 max-w-xl">
+        LoomPath delivers global, hands-on STEM learning through clear teaching, guided online activities, and real-world engineering challenges.
+      </p>
+      <div class="mt-8 flex gap-4">
+        <a href="programs.html" class="bg-white text-loomDeep px-6 py-3 rounded-full font-semibold hover:scale-105 transition">Explore Programs</a>
+        <a href="get-involved.html" class="border border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition">Join Us</a>
+      </div>
+    </div>
+    <div class="rounded-3xl overflow-hidden shadow-2xl bg-white/5 h-96 flex items-center justify-center">
+      <div class="text-white/70">[Hero Image Placeholder]</div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+  <div>
+    <h2 class="text-3xl font-bold text-loomDeep">Our Mission</h2>
+    <p class="mt-4 text-gray-600">
+      We make STEM learning accessible to students worldwide through clear explanations, hands-on activities using simple materials, and interactive online sessions.
+      <br><br>
+      Our programs focus on helping students understand core concepts, build confidence, and apply real engineering thinking—no lab equipment required.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 gap-6">
+    <div class="bg-white rounded-2xl shadow p-6 text-center">
+      <div class="text-4xl font-bold text-loomDeep">10+</div>
+      <div class="text-sm text-gray-500 mt-1">Workshops Held</div>
+    </div>
+    <div class="bg-white rounded-2xl shadow p-6 text-center">
+      <div class="text-4xl font-bold text-loomDeep">150+</div>
+      <div class="text-sm text-gray-500 mt-1">Students Reached</div>
+    </div>
+    <div class="bg-white rounded-2xl shadow p-6 text-center">
+      <div class="text-4xl font-bold text-loomDeep">5</div>
+      <div class="text-sm text-gray-500 mt-1">Partner Schools</div>
+    </div>
+    <div class="bg-white rounded-2xl shadow p-6 text-center">
+      <div class="text-4xl font-bold text-loomDeep">100+</div>
+      <div class="text-sm text-gray-500 mt-1">Projects Built</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-bold text-center text-loomDeep">What People Are Saying</h2>
+  <div class="mt-8 grid md:grid-cols-3 gap-6">
+    <blockquote class="bg-white p-6 rounded-xl shadow">
+      “I never thought science could be this fun — I built my own light-up card!”
+      <br><span class="text-sm text-gray-500">— Rafa, Age 11</span>
+    </blockquote>
+    <blockquote class="bg-white p-6 rounded-xl shadow">
+      “The students were fully engaged. They loved building and learning by doing.”
+      <br><span class="text-sm text-gray-500">— Partner Teacher, Jakarta</span>
+    </blockquote>
+    <blockquote class="bg-white p-6 rounded-xl shadow">
+      “This program made engineering feel possible for me. I want to build more.”
+      <br><span class="text-sm text-gray-500">— Siti, Age 13</span>
+    </blockquote>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-gray-900 text-gray-100 mt-20">
+  <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
+    <div>
+      <img src="assets/img/logo.jpg" alt="LoomPath logo" class="w-12 h-12 mb-3 rounded-full object-cover mx-auto md:mx-0">
+      <h3 class="text-white font-semibold">LoomPath</h3>
+      <p class="text-sm text-gray-400 mt-2">Igniting curiosity through hands-on STEM workshops worldwide.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-medium">Quick Links</h4>
+      <ul class="mt-2 text-sm text-gray-400 space-y-1">
+        <li><a href="programs.html" class="hover:text-white">Programs</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="gallery.html" class="hover:text-white">Gallery</a></li>
+        <li><a href="get-involved.html" class="hover:text-white">Get Involved</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-medium">Contact</h4>
+      <p class="text-sm text-gray-400 mt-2">loompath.id@gmail.com</p>
+      <p class="text-sm text-gray-400">
+        Instagram:
+        <a href="https://www.instagram.com/loompath.project/" target="_blank" class="text-loomBlue hover:underline">
+          @loompath.project
+        </a>
+      </p>
+      <p class="text-sm text-gray-400">Jakarta, Indonesia</p>
+    </div>
+  </div>
+
+  <div class="text-center text-xs text-gray-500 py-4 border-t border-gray-800">
+    © 2025 LoomPath — All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

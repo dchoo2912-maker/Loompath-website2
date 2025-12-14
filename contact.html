@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — LoomPath</title><script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { colors: { loomBlue: "#0ea5e9", loomDeep: "#0369a1", loomSoft: "#eff8ff" } } } }</script><link rel="stylesheet" href="styles.css"></head>
+<body class="bg-white text-gray-800"><header class="fixed w-full z-40 bg-white/80 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/img/logo.jpg" alt="LoomPath logo" class="w-11 h-11 rounded-full object-cover">
+      <div>
+        <div class="font-semibold text-lg">LoomPath</div>
+        <div class="text-xs text-gray-500">Igniting Curiosity</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="index.html" class="hover:text-loomDeep">Home</a>
+      <a href="programs.html" class="hover:text-loomDeep">Programs</a>
+      <a href="about.html" class="hover:text-loomDeep">About</a>
+      <a href="gallery.html" class="hover:text-loomDeep">Gallery</a>
+      <a href="faq.html" class="hover:text-loomDeep">FAQ</a>
+      <a href="get-involved.html" class="hover:text-loomDeep">Get Involved</a>
+      <a href="donate.html" class="hover:text-loomDeep">Donate</a>
+      <a href="contact.html" class="hover:text-loomDeep">Contact</a>
+      <a href="donate.html" class="ml-4 inline-block bg-loomBlue text-white px-4 py-2 rounded-full text-sm hover:bg-loomDeep transition">Donate</a>
+    </nav>
+    <div class="md:hidden">
+      <details class="relative">
+        <summary class="cursor-pointer px-3 py-2 rounded-md bg-loomBlue text-white">Menu</summary>
+        <div class="absolute right-0 mt-2 bg-white shadow rounded-md w-48 py-2">
+          <a href="index.html" class="block px-4 py-2 hover:bg-gray-50">Home</a>
+          <a href="programs.html" class="block px-4 py-2 hover:bg-gray-50">Programs</a>
+          <a href="about.html" class="block px-4 py-2 hover:bg-gray-50">About</a>
+          <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-50">Gallery</a>
+          <a href="faq.html" class="block px-4 py-2 hover:bg-gray-50">FAQ</a>
+          <a href="get-involved.html" class="block px-4 py-2 hover:bg-gray-50">Get Involved</a>
+          <a href="donate.html" class="block px-4 py-2 hover:bg-gray-50">Donate</a>
+          <a href="contact.html" class="block px-4 py-2 hover:bg-gray-50">Contact</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+<script>
+window.addEventListener('scroll', function(){
+  var h = document.querySelector('header');
+  if(!h) return;
+  if(window.scrollY > 20) h.classList.add('shadow-md');
+  else h.classList.remove('shadow-md');
+});
+</script>
+
+<main class="pt-28 max-w-3xl mx-auto px-6 py-12">
+  <h1 class="text-3xl font-bold text-loomDeep">Contact Us</h1>
+  <p class="mt-2 text-gray-600">Questions about workshops, partnerships, or donations? Send us a message.</p>
+  <form id="contactForm" class="mt-6 grid gap-4">
+    <input required name="name" placeholder="Your name" class="p-3 border rounded-md" />
+    <input required type="email" name="email" placeholder="Your email" class="p-3 border rounded-md" />
+    <input name="subject" placeholder="Subject" class="p-3 border rounded-md" />
+    <textarea required name="message" placeholder="Message" class="p-3 border rounded-md h-36"></textarea>
+    <div class="flex gap-4">
+      <button type="submit" class="bg-loomBlue text-white px-4 py-2 rounded-full">Send</button>
+      <a href="mailto:loompath.id@gmail.com" class="border border-loomBlue px-4 py-2 rounded-full text-loomDeep">Email Us</a>
+    </div>
+  </form>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var form = e.target;
+      var name = encodeURIComponent(form.name.value);
+      var email = encodeURIComponent(form.email.value);
+      var subject = encodeURIComponent(form.subject.value || 'Contact from LoomPath site');
+      var message = encodeURIComponent(form.message.value + "\n\nFrom: " + name + " (" + email + ")");
+      var mailto = 'mailto:loompath.id@gmail.com?subject=' + subject + '&body=' + message;
+      window.location.href = mailto;
+    });
+  </script>
+</main>
+<footer class="bg-gray-900 text-gray-100 mt-20">
+  <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
+    <div>
+      <img src="assets/img/logo.jpg" alt="LoomPath logo" class="w-12 h-12 mb-3 rounded-full object-cover mx-auto md:mx-0">
+<h3 class="text-white font-semibold">LoomPath</h3>
+      <p class="text-sm text-gray-400 mt-2">Igniting curiosity through hands-on STEM workshops across Indonesia.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-medium">Quick Links</h4>
+      <ul class="mt-2 text-sm text-gray-400 space-y-1">
+        <li><a href="programs.html" class="hover:text-white">Programs</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="gallery.html" class="hover:text-white">Gallery</a></li>
+        <li><a href="get-involved.html" class="hover:text-white">Get Involved</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-medium">Contact</h4>
+      <p class="text-sm text-gray-400 mt-2">loompath.id@gmail.com</p>
+      <p class="text-sm text-gray-400">Instagram: <a href="https://www.instagram.com/loompath.project/" target="_blank" class="text-loomBlue hover:underline">@loompath.project</a></p>
+      <p class="text-sm text-gray-400">Jakarta, Indonesia</p>
+    </div>
+  </div>
+  <div class="text-center text-xs text-gray-500 py-4 border-t border-gray-800">
+    © 2025 LoomPath — All rights reserved.
+  </div>
+</footer>
+</body></html>

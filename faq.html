@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAQ — LoomPath</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        loomBlue: "#0ea5e9",
+        loomDeep: "#0369a1",
+        loomSoft: "#eff8ff"
+      }
+    }
+  }
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white text-gray-800">
+
+<header class="fixed w-full z-40 bg-white/80 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/img/logo.jpg" alt="LoomPath logo" class="w-11 h-11 rounded-full object-cover">
+      <div>
+        <div class="font-semibold text-lg">LoomPath</div>
+        <div class="text-xs text-gray-500">Igniting Curiosity</div>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="index.html" class="hover:text-loomDeep">Home</a>
+      <a href="programs.html" class="hover:text-loomDeep">Programs</a>
+      <a href="about.html" class="hover:text-loomDeep">About</a>
+      <a href="gallery.html" class="hover:text-loomDeep">Gallery</a>
+      <a href="faq.html" class="hover:text-loomDeep">FAQ</a>
+      <a href="get-involved.html" class="hover:text-loomDeep">Get Involved</a>
+      <a href="donate.html" class="hover:text-loomDeep">Donate</a>
+      <a href="contact.html" class="hover:text-loomDeep">Contact</a>
+      <a href="donate.html"
+         class="ml-4 inline-block bg-loomBlue text-white px-4 py-2 rounded-full text-sm hover:bg-loomDeep transition">
+        Donate
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+window.addEventListener('scroll', function(){
+  var h = document.querySelector('header');
+  if(!h) return;
+  if(window.scrollY > 20) h.classList.add('shadow-md');
+  else h.classList.remove('shadow-md');
+});
+</script>
+
+<main class="pt-28 max-w-7xl mx-auto px-6 py-12">
+  <h1 class="text-3xl font-bold text-loomDeep">Frequently Asked Questions</h1>
+
+  <div class="mt-6 space-y-4">
+
+    <details class="bg-white p-4 rounded-lg shadow">
+      <summary class="font-semibold cursor-pointer">What is LoomPath?</summary>
+      <div class="mt-2 text-gray-600">
+        LoomPath is a non-profit initiative focused on expanding access to STEM education
+        through hands-on workshops, mentorship, and community-led programs.
+      </div>
+    </details>
+
+    <details class="bg-white p-4 rounded-lg shadow">
+      <summary class="font-semibold cursor-pointer">Who can participate?</summary>
+      <div class="mt-2 text-gray-600">
+        Students of all backgrounds and experience levels are welcome.
+        Our workshops are designed to be inclusive and adaptable to different classrooms and communities.
+      </div>
+    </details>
+
+    <details class="bg-white p-4 rounded-lg shadow">
+      <summary class="font-semibold cursor-pointer">How can I volunteer or join the team?</summary>
+      <div class="mt-2 text-gray-600">
+        Visit our
+        <a href="get-involved.html" class="underline">Get Involved</a>
+        page to explore roles and submit an application through our Google Form.
+        Selected applicants may be invited for a short interview and training.
+      </div>
+    </details>
+
+    <details class="bg-white p-4 rounded-lg shadow">
+      <summary class="font-semibold cursor-pointer">How are donations used?</summary>
+      <div class="mt-2 text-gray-600">
+        Donations directly support workshop kits, materials, training resources,
+        outreach efforts, and access for underserved schools and communities.
+      </div>
+    </details>
+
+    <details class="bg-white p-4 rounded-lg shadow">
+      <summary class="font-semibold cursor-pointer">Where are you based?</summary>
+      <div class="mt-2 text-gray-600">
+        LoomPath operates globally through volunteers and chapters, with core coordination
+        based in Indonesia.
+      </div>
+    </details>
+
+    <details class="bg-white p-4 rounded-lg shadow">
+      <summary class="font-semibold cursor-pointer">How can my school or organization partner with LoomPath?</summary>
+      <div class="mt-2 text-gray-600">
+        Schools and NGOs can collaborate with LoomPath by co-hosting workshops,
+        supporting outreach, or integrating our programs into existing initiatives.
+        Contact us at
+        <a href="mailto:loompath.id@gmail.com" class="underline">loompath.id@gmail.com</a>
+        to start a conversation.
+      </div>
+    </details>
+
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-gray-100 mt-20">
+  <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
+
+    <div>
+      <img src="assets/img/logo.jpg" alt="LoomPath logo"
+           class="w-12 h-12 mb-3 rounded-full object-cover mx-auto md:mx-0">
+      <h3 class="text-white font-semibold">LoomPath</h3>
+      <p class="text-sm text-gray-400 mt-2">
+        Igniting curiosity through hands-on STEM learning worldwide.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-white font-medium">Quick Links</h4>
+      <ul class="mt-2 text-sm text-gray-400 space-y-1">
+        <li><a href="programs.html" class="hover:text-white">Programs</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="gallery.html" class="hover:text-white">Gallery</a></li>
+        <li><a href="get-involved.html" class="hover:text-white">Get Involved</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white font-medium">Contact</h4>
+      <p class="text-sm text-gray-400 mt-2">loompath.id@gmail.com</p>
+      <p class="text-sm text-gray-400">
+        Instagram:
+        <a href="https://www.instagram.com/loompath.project/"
+           target="_blank"
+           class="text-loomBlue hover:underline">
+          @loompath.project
+        </a>
+      </p>
+      <p class="text-sm text-gray-400">Jakarta, Indonesia</p>
+    </div>
+
+  </div>
+
+  <div class="text-center text-xs text-gray-500 py-4 border-t border-gray-800">
+    © 2025 LoomPath — All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

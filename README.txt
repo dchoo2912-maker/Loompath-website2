@@ -1,0 +1,1 @@
+Place your images here and name them: story.jpg, mission.jpg, founder.jpg. The About page references /assets/story.jpg etc.
