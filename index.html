@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LoomPath — Home</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -20,6 +21,16 @@ tailwind.config = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
+
+<style>
+/* Active navigation link */
+.nav-active {
+  color: #0369a1; /* loomDeep */
+  font-weight: 600;
+  border-bottom: 2px solid #0369a1;
+  padding-bottom: 2px;
+}
+</style>
 </head>
 
 <body class="bg-white text-gray-800">
@@ -35,29 +46,31 @@ tailwind.config = {
     </a>
 
     <nav class="hidden md:flex items-center gap-6 text-sm">
-      <a href="index.html" class="hover:text-loomDeep">Home</a>
-      <a href="programs.html" class="hover:text-loomDeep">Programs</a>
-      <a href="about.html" class="hover:text-loomDeep">About</a>
-      <a href="gallery.html" class="hover:text-loomDeep">Gallery</a>
-      <a href="faq.html" class="hover:text-loomDeep">FAQ</a>
-      <a href="get-involved.html" class="hover:text-loomDeep">Get Involved</a>
-      <a href="donate.html" class="hover:text-loomDeep">Donate</a>
-      <a href="contact.html" class="hover:text-loomDeep">Contact</a>
-      <a href="donate.html" class="ml-4 inline-block bg-loomBlue text-white px-4 py-2 rounded-full text-sm hover:bg-loomDeep transition">Donate</a>
+      <a href="index.html">Home</a>
+      <a href="programs.html">Programs</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faq.html">FAQ</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html" class="ml-4 inline-block bg-loomBlue text-white px-4 py-2 rounded-full text-sm hover:bg-loomDeep transition">
+        Donate
+      </a>
     </nav>
 
     <div class="md:hidden">
       <details class="relative">
         <summary class="cursor-pointer px-3 py-2 rounded-md bg-loomBlue text-white">Menu</summary>
         <div class="absolute right-0 mt-2 bg-white shadow rounded-md w-48 py-2">
-          <a href="index.html" class="block px-4 py-2 hover:bg-gray-50">Home</a>
-          <a href="programs.html" class="block px-4 py-2 hover:bg-gray-50">Programs</a>
-          <a href="about.html" class="block px-4 py-2 hover:bg-gray-50">About</a>
-          <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-50">Gallery</a>
-          <a href="faq.html" class="block px-4 py-2 hover:bg-gray-50">FAQ</a>
-          <a href="get-involved.html" class="block px-4 py-2 hover:bg-gray-50">Get Involved</a>
-          <a href="donate.html" class="block px-4 py-2 hover:bg-gray-50">Donate</a>
-          <a href="contact.html" class="block px-4 py-2 hover:bg-gray-50">Contact</a>
+          <a href="index.html" class="block px-4 py-2">Home</a>
+          <a href="programs.html" class="block px-4 py-2">Programs</a>
+          <a href="about.html" class="block px-4 py-2">About</a>
+          <a href="gallery.html" class="block px-4 py-2">Gallery</a>
+          <a href="faq.html" class="block px-4 py-2">FAQ</a>
+          <a href="get-involved.html" class="block px-4 py-2">Get Involved</a>
+          <a href="donate.html" class="block px-4 py-2">Donate</a>
+          <a href="contact.html" class="block px-4 py-2">Contact</a>
         </div>
       </details>
     </div>
@@ -66,11 +79,21 @@ tailwind.config = {
 
 <script>
 window.addEventListener('scroll', function(){
-  var h = document.querySelector('header');
+  const h = document.querySelector('header');
   if(!h) return;
-  if(window.scrollY > 20) h.classList.add('shadow-md');
-  else h.classList.remove('shadow-md');
+  window.scrollY > 20 ? h.classList.add('shadow-md') : h.classList.remove('shadow-md');
 });
+
+/* Highlight active page */
+(function () {
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+  document.querySelectorAll("nav a, details a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("nav-active");
+    }
+  });
+})();
 </script>
 
 <main class="pt-28">
@@ -80,13 +103,20 @@ window.addEventListener('scroll', function(){
   <div class="max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-8 items-center">
     <div>
       <p class="text-sm font-semibold uppercase tracking-wide">STEM EDUCATION WITHOUT BORDERS</p>
-      <h1 class="text-4xl md:text-5xl font-extrabold mt-4">Empowering Young Innovators, Everywhere</h1>
+      <h1 class="text-4xl md:text-5xl font-extrabold mt-4">
+        Empowering Young Innovators, Everywhere
+      </h1>
       <p class="mt-6 text-lg text-white/90 max-w-xl">
-        LoomPath delivers global, hands-on STEM learning through clear teaching, guided online activities, and real-world engineering challenges.
+        LoomPath delivers global, hands-on STEM learning through clear teaching,
+        guided online activities, and real-world engineering challenges.
       </p>
       <div class="mt-8 flex gap-4">
-        <a href="programs.html" class="bg-white text-loomDeep px-6 py-3 rounded-full font-semibold hover:scale-105 transition">Explore Programs</a>
-        <a href="get-involved.html" class="border border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition">Join Us</a>
+        <a href="programs.html" class="bg-white text-loomDeep px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+          Explore Programs
+        </a>
+        <a href="get-involved.html" class="border border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition">
+          Join Us
+        </a>
       </div>
     </div>
     <div class="rounded-3xl overflow-hidden shadow-2xl bg-white/5 h-96 flex items-center justify-center">
@@ -100,9 +130,11 @@ window.addEventListener('scroll', function(){
   <div>
     <h2 class="text-3xl font-bold text-loomDeep">Our Mission</h2>
     <p class="mt-4 text-gray-600">
-      We make STEM learning accessible to students worldwide through clear explanations, hands-on activities using simple materials, and interactive online sessions.
+      We make STEM learning accessible to students worldwide through clear explanations,
+      hands-on activities using simple materials, and interactive online sessions.
       <br><br>
-      Our programs focus on helping students understand core concepts, build confidence, and apply real engineering thinking—no lab equipment required.
+      Our programs focus on helping students understand core concepts, build confidence,
+      and apply real engineering thinking—no lab equipment required.
     </p>
   </div>
 
@@ -152,7 +184,9 @@ window.addEventListener('scroll', function(){
     <div>
       <img src="assets/img/logo.jpg" alt="LoomPath logo" class="w-12 h-12 mb-3 rounded-full object-cover mx-auto md:mx-0">
       <h3 class="text-white font-semibold">LoomPath</h3>
-      <p class="text-sm text-gray-400 mt-2">Igniting curiosity through hands-on STEM workshops worldwide.</p>
+      <p class="text-sm text-gray-400 mt-2">
+        Igniting curiosity through hands-on STEM workshops worldwide.
+      </p>
     </div>
     <div>
       <h4 class="text-white font-medium">Quick Links</h4>
