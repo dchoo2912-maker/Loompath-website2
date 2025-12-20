@@ -21,6 +21,15 @@ tailwind.config = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
+
+<style>
+.nav-active {
+  color: #0369a1;
+  font-weight: 600;
+  border-bottom: 2px solid #0369a1;
+  padding-bottom: 2px;
+}
+</style>
 </head>
 
 <body class="bg-white text-gray-800">
@@ -37,17 +46,13 @@ tailwind.config = {
 
     <nav class="hidden md:flex items-center gap-6 text-sm">
       <a href="index.html" class="hover:text-loomDeep">Home</a>
-
-      <!-- ACTIVE PAGE -->
       <a href="programs.html" class="nav-active">Programs</a>
-
       <a href="about.html" class="hover:text-loomDeep">About</a>
       <a href="gallery.html" class="hover:text-loomDeep">Gallery</a>
       <a href="faq.html" class="hover:text-loomDeep">FAQ</a>
       <a href="get-involved.html" class="hover:text-loomDeep">Get Involved</a>
       <a href="donate.html" class="hover:text-loomDeep">Donate</a>
       <a href="contact.html" class="hover:text-loomDeep">Contact</a>
-
       <a href="donate.html"
          class="ml-4 inline-block bg-loomBlue text-white px-4 py-2 rounded-full text-sm hover:bg-loomDeep transition">
         Donate
@@ -58,10 +63,9 @@ tailwind.config = {
 
 <script>
 window.addEventListener('scroll', function(){
-  var h = document.querySelector('header');
+  const h = document.querySelector('header');
   if(!h) return;
-  if(window.scrollY > 20) h.classList.add('shadow-md');
-  else h.classList.remove('shadow-md');
+  window.scrollY > 20 ? h.classList.add('shadow-md') : h.classList.remove('shadow-md');
 });
 </script>
 
@@ -74,59 +78,83 @@ window.addEventListener('scroll', function(){
   </p>
 </header>
 
+<!-- PROGRAM 1 -->
 <section class="grid md:grid-cols-2 gap-8 items-center fade-up">
   <div>
     <h2 class="text-3xl font-bold text-loomDeep">Concept Foundations (Online Lessons)</h2>
     <p class="mt-4 text-gray-600">
-      Students learn physics and engineering through clear demonstrations, interactive explanations,
-      and real-world examples.
+      Students learn physics and engineering through clear demonstrations,
+      interactive explanations, and real-world examples.
     </p>
   </div>
 
-  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 flex items-center justify-center">
-    <div class="text-gray-400">[Concept Lessons Image Placeholder]</div>
+  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 shadow">
+    <img
+      src="assets/img/program-concepts.jpeg"
+      alt="Online STEM concept lessons"
+      loading="lazy"
+      class="w-full h-full object-cover"
+    >
   </div>
 </section>
 
+<!-- PROGRAM 2 -->
 <section class="grid md:grid-cols-2 gap-8 items-center fade-up">
   <div>
     <h2 class="text-3xl font-bold text-loomDeep">At-Home Engineering Builds</h2>
     <p class="mt-4 text-gray-600">
-      Optional builds using low-cost household materials. Students apply concepts by constructing
-      rockets, circuits, catapults, and more.
+      Optional builds using low-cost household materials. Students apply concepts
+      by constructing rockets, circuits, catapults, and more.
     </p>
   </div>
 
-  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 flex items-center justify-center">
-    <div class="text-gray-400">[At-Home Builds Image Placeholder]</div>
+  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 shadow">
+    <img
+      src="assets/img/programs-build.jpeg"
+      alt="At-home engineering builds using household materials"
+      loading="lazy"
+      class="w-full h-full object-cover"
+    >
   </div>
 </section>
 
+<!-- PROGRAM 3 -->
 <section class="grid md:grid-cols-2 gap-8 items-center fade-up">
   <div>
     <h2 class="text-3xl font-bold text-loomDeep">Design &amp; Simulation Challenges</h2>
     <p class="mt-4 text-gray-600">
-      Hands-on STEM using virtual tools like PhET and Tinkercad — accessible to students globally
-      without needing supplies.
+      Hands-on STEM using virtual tools like PhET and Tinkercad — accessible
+      to students globally without needing supplies.
     </p>
   </div>
 
-  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 flex items-center justify-center">
-    <div class="text-gray-400">[Simulation Tools Image Placeholder]</div>
+  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 shadow">
+    <img
+      src="assets/img/program-simulation.jpeg"
+      alt="STEM design and simulation challenges"
+      loading="lazy"
+      class="w-full h-full object-cover"
+    >
   </div>
 </section>
 
+<!-- PROGRAM 4 -->
 <section class="grid md:grid-cols-2 gap-8 items-center fade-up">
   <div>
     <h2 class="text-3xl font-bold text-loomDeep">STEM Pathways Talks</h2>
     <p class="mt-4 text-gray-600">
-      Guest speakers include university engineering students and recently admitted applicants
-      sharing insights into STEM fields, majors, and university preparation.
+      Guest speakers include university engineering students and recently
+      admitted applicants sharing insights into STEM fields and majors.
     </p>
   </div>
 
-  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 flex items-center justify-center">
-    <div class="text-gray-400">[Guest Speaker Image Placeholder]</div>
+  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 shadow">
+    <img
+      src="assets/img/program-talks.jpeg"
+      alt="STEM pathways talks with guest speakers"
+      loading="lazy"
+      class="w-full h-full object-cover"
+    >
   </div>
 </section>
 
@@ -141,7 +169,8 @@ window.addEventListener('scroll', function(){
 <footer class="bg-gray-900 text-gray-100 mt-20">
   <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
     <div>
-      <img src="assets/img/logo.jpg" alt="LoomPath logo" class="w-12 h-12 mb-3 rounded-full object-cover mx-auto md:mx-0">
+      <img src="assets/img/logo.jpg" alt="LoomPath logo"
+           class="w-12 h-12 mb-3 rounded-full object-cover mx-auto md:mx-0">
       <h3 class="text-white font-semibold">LoomPath</h3>
       <p class="text-sm text-gray-400 mt-2">
         Igniting curiosity through hands-on STEM workshops worldwide.
@@ -164,9 +193,7 @@ window.addEventListener('scroll', function(){
       <p class="text-sm text-gray-400">
         Instagram:
         <a href="https://www.instagram.com/loompath.project/" target="_blank"
-           class="text-loomBlue hover:underline">
-          @loompath.project
-        </a>
+           class="text-loomBlue hover:underline">@loompath.project</a>
       </p>
       <p class="text-sm text-gray-400">Jakarta, Indonesia</p>
     </div>
