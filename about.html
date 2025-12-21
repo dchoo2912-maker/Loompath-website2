@@ -34,12 +34,11 @@ tailwind.config = {
 
 <body class="bg-white text-gray-800">
 
+<!-- HEADER -->
 <header class="fixed w-full z-40 bg-white/80 backdrop-blur-sm">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
     <a href="index.html" class="flex items-center gap-3">
-      <img src="assets/img/logo.jpg" alt="LoomPath logo"
-           class="w-11 h-11 rounded-full object-cover">
+      <img src="assets/img/logo.jpg" alt="LoomPath logo" class="w-11 h-11 rounded-full object-cover">
       <div>
         <div class="font-semibold text-lg">LoomPath</div>
         <div class="text-xs text-gray-500">Igniting Curiosity</div>
@@ -61,25 +60,6 @@ tailwind.config = {
         Donate
       </a>
     </nav>
-
-    <div class="md:hidden">
-      <details class="relative">
-        <summary class="cursor-pointer px-3 py-2 rounded-md bg-loomBlue text-white">
-          Menu
-        </summary>
-        <div class="absolute right-0 mt-2 bg-white shadow rounded-md w-48 py-2">
-          <a href="index.html" class="block px-4 py-2 hover:bg-gray-50">Home</a>
-          <a href="programs.html" class="block px-4 py-2 hover:bg-gray-50">Programs</a>
-          <a href="about.html" class="block px-4 py-2 hover:bg-gray-50">About</a>
-          <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-50">Gallery</a>
-          <a href="faq.html" class="block px-4 py-2 hover:bg-gray-50">FAQ</a>
-          <a href="get-involved.html" class="block px-4 py-2 hover:bg-gray-50">Get Involved</a>
-          <a href="donate.html" class="block px-4 py-2 hover:bg-gray-50">Donate</a>
-          <a href="contact.html" class="block px-4 py-2 hover:bg-gray-50">Contact</a>
-        </div>
-      </details>
-    </div>
-
   </div>
 </header>
 
@@ -91,86 +71,126 @@ window.addEventListener('scroll', function(){
 });
 </script>
 
+<!-- MAIN -->
 <main class="pt-28 max-w-7xl mx-auto px-6 py-12 space-y-20">
 
 <!-- FOUNDER -->
-<section class="grid md:grid-cols-2 gap-8 items-center fade-up">
+<section class="grid md:grid-cols-2 gap-12 items-center">
+
+  <!-- TEXT -->
   <div>
     <h2 class="text-3xl font-bold text-loomDeep">Founder</h2>
     <h3 class="text-xl font-semibold mt-2">
-      Aaren Bhandari — Founder &amp; CEO
+      Aaren Bhandari — Founder & CEO
     </h3>
 
     <p class="mt-4 text-gray-600">
-       Aaren founded LoomPath to turn curiosity into opportunity. He leads the development of STEM workshops, online programs, and student-led collaboration systems that make engineering concepts accessible to young learners. His background in advanced science coursework and competitive STEM activities shaped the program’s focus on clarity, hands-on exploration, and real-world problem-solving.
+      Aaren founded LoomPath to turn curiosity into opportunity. He leads the
+      development of STEM workshops, online programs, and student-led
+      collaboration systems that make engineering concepts accessible to young
+      learners. His background in advanced science coursework and competitive
+      STEM activities shaped the program’s focus on clarity, hands-on
+      exploration, and real-world problem-solving.
     </p>
 
     <p class="mt-4 text-gray-600">
-      Aaren built LoomPath with the goal of lowering barriers for students who rarely get hands-on STEM exposure. He directs curriculum design, volunteer training, and global partnerships to ensure every program stays accurate, scalable, and enjoyable. LoomPath reflects his belief that early engineering experiences can build confidence and open long-term pathways in STEM
+      Aaren built LoomPath with the goal of lowering barriers for students who
+      rarely get hands-on STEM exposure. He directs curriculum design,
+      volunteer training, and global partnerships to ensure every program stays
+      accurate, scalable, and enjoyable. LoomPath reflects his belief that early
+      engineering experiences can build confidence and open long-term pathways
+      in STEM.
     </p>
-
   </div>
 
-  <div class="rounded-2xl bg-gray-100 h-80 flex items-center justify-center shadow-lg">
-  <img
-    src="assets/img/founder.jpeg"
-    alt="Aaren Bhandari — Founder & CEO"
-    class="max-h-full max-w-full object-contain"
-    loading="lazy"
-  >
-</div>
+  <!-- IMAGE (PORTRAIT FIXED) -->
+  <div class="flex justify-center">
+    <div class="bg-white rounded-2xl shadow-lg p-4">
+      <img
+        src="assets/img/founder.jpeg"
+        alt="Aaren Bhandari — Founder & CEO"
+        class="h-96 w-auto object-contain rounded-xl"
+        loading="lazy"
+      >
+    </div>
+  </div>
 
 </section>
 
 <!-- OUR STORY -->
-<section class="grid md:grid-cols-2 gap-8 items-center fade-up">
+<section class="grid md:grid-cols-2 gap-12 items-center">
+
   <div>
     <h2 class="text-3xl font-bold text-loomDeep">Our Story</h2>
+
     <p class="mt-4 text-gray-600">
       LoomPath began with a simple idea: STEM learning should be hands-on,
-      creative, and open to everyone.
+      creative, and open to everyone. Early workshops revealed how many students
+      had never built a circuit, tested a design, or experimented with simple
+      engineering materials.
     </p>
+
     <p class="mt-4 text-gray-600">
-      What started as small in-person workshops evolved into a global initiative
-      delivering guided builds, concept lessons, and mini-projects accessible
-      anywhere in the world.
+      What started as small in-person activities grew into a structured online
+      initiative with clear curriculum, volunteer systems, and global reach.
+      LoomPath now runs guided builds, concept lessons, and mini-projects that
+      help students explore physics and engineering through simple materials and
+      accessible explanations.
     </p>
   </div>
 
   <div class="rounded-2xl overflow-hidden bg-gray-100 h-80">
-    <img src="assets/img/story.jpeg" alt="LoomPath story"
-         class="w-full h-full object-cover" loading="lazy">
+    <img
+      src="assets/img/story.jpeg"
+      alt="LoomPath story"
+      class="w-full h-full object-cover"
+      loading="lazy"
+    >
   </div>
+
 </section>
 
 <!-- OUR MISSION -->
-<section class="grid md:grid-cols-2 gap-8 items-center fade-up">
+<section class="grid md:grid-cols-2 gap-12 items-center">
+
   <div>
     <h2 class="text-3xl font-bold text-loomDeep">Our Mission</h2>
+
     <p class="mt-4 text-gray-600">
-      Our mission is to make STEM education accessible, engaging, and empowering
-      through hands-on learning and clear instruction.
+      Our mission is to make STEM education accessible, engaging, and empowering.
+      We help students understand engineering concepts through hands-on projects
+      that encourage creativity, problem-solving, and confidence in their
+      abilities.
     </p>
+
     <p class="mt-4 text-gray-600">
-      We aim to help students see themselves as makers, engineers, and
-      problem-solvers capable of shaping their future.
+      By using low-cost materials and guided instruction, LoomPath removes
+      barriers that limit students from exploring STEM. We work to build a
+      generation of young thinkers who see themselves as makers, designers, and
+      problem-solvers.
     </p>
   </div>
 
   <div class="rounded-2xl overflow-hidden bg-gray-100 h-80">
-    <img src="assets/img/mission.jpeg" alt="LoomPath mission"
-         class="w-full h-full object-cover" loading="lazy">
+    <img
+      src="assets/img/mission.jpeg"
+      alt="LoomPath mission"
+      class="w-full h-full object-cover"
+      loading="lazy"
+    >
   </div>
+
 </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer class="bg-gray-900 text-gray-100 mt-20">
   <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
 
     <div>
       <img src="assets/img/logo.jpg" alt="LoomPath logo"
-           class="w-12 h-12 mb-3 rounded-full object-cover mx-auto md:mx-0">
+           class="w-12 h-12 mb-3 rounded-full object-cover">
       <h3 class="text-white font-semibold">LoomPath</h3>
       <p class="text-sm text-gray-400 mt-2">
         Igniting curiosity through hands-on STEM workshops worldwide.
@@ -209,3 +229,4 @@ window.addEventListener('scroll', function(){
 
 </body>
 </html>
+
